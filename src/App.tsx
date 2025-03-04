@@ -5,15 +5,33 @@ import NavigationMenu from './components/layout/NavigationMenu';
 
 import './App.css';
 import Header from './components/layout/Header';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import StatusInfoPage from './pages/StatusInfoPage';
+import HistoryPage from './pages/HistoryPage';
+import OperatingDataPage from './pages/OperatingDataPage';
+import VersionPage from './pages/VersionPage';
 
 const App: React.FC = () => {
   return (
 
-    <Router>       
-      <NavigationMenu />
-      <Header></Header>
-    </Router>     
+    <Router>
+    <Header />
+    <div className="d-flex">
+      <NavigationMenu/>
+      <div className="container-fluid">
+        <div>
+          <div >
+            <Routes>
+              <Route path="/status-info" element={<StatusInfoPage />} />
+              <Route path="/history" element={<HistoryPage />} />
+              <Route path="/oprating-data" element={<OperatingDataPage />} />
+              <Route path="/version" element={<VersionPage />} />
+            </Routes>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Router>
   );
 };
 
