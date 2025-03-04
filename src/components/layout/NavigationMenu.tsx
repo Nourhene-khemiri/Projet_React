@@ -20,8 +20,7 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({}) => {
 
     <Nav 
     className="flex-column" 
-    style={{ backgroundColor: 'black', color: 'white', width: '250px', height: '100vh' }}
-  >
+    style={{ backgroundColor: 'black', color: 'white', width: '250px', height: '100vh' }}>
     <Nav.Link href="/home" className="text-white d-flex align-items-center">
                          
             </Nav.Link>
@@ -52,7 +51,7 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({}) => {
             <img src={Version} alt="Logo" style={{ width: '35px'}} />  
             &nbsp;    Version
             </Nav.Link>
-            <Nav.Link href="/customers" className="text-white d-flex align-items-center">
+            <Nav.Link href="/maintenance" className="text-white d-flex align-items-center">
             <img src={Maintenance} alt="Logo" style={{ width: '35px'}} />  
 
 &nbsp;    Maintenance

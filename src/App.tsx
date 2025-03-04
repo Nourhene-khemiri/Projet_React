@@ -10,6 +10,7 @@ import StatusInfoPage from './pages/StatusInfoPage';
 import HistoryPage from './pages/HistoryPage';
 import OperatingDataPage from './pages/OperatingDataPage';
 import VersionPage from './pages/VersionPage';
+import MaintenancePage from './pages/MaintenancePage';
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: React.FC = () => {
               <Route path="/history" element={<HistoryPage />} />
               <Route path="/oprating-data" element={<OperatingDataPage />} />
               <Route path="/version" element={<VersionPage />} />
+              <Route path="/maintenance" element={<MaintenancePage />} />
             </Routes>
           </div>
         </div>
