@@ -16,19 +16,18 @@ const VersionPage: React.FC<VersionPage> = ({ }) => {
 
   return (
     <div>
-      <br></br> <br></br> <br></br> <br></br> 
-      <h3>History</h3>
+    
+      <h3>Version</h3>
       
-      <button type="button" className="btn btn-outline-dark btn-lg">
-        Download Events History
-      </button> &nbsp;&nbsp;
-      <button type="button" className="btn btn-outline-dark btn-lg">
-        Erase Events History
-      </button>
-      <br />
-      <br />
+      <h4>Software Version</h4>
+     
+      
       <Table headers={tableHeaders1} data={tableData} />
+      <h4>Hardware Version</h4>
+     
       <Table headers={tableHeaders2} data={tableData} />
+      <h4>Subsystem Components</h4>
+
       <Table headers={tableHeaders3} data={tableData} />
 
     </div>

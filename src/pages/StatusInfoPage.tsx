@@ -1,40 +1,45 @@
 import React from 'react';
+import { Table, Button, Container, Row, Col } from 'react-bootstrap';
 
-interface StatusInfoPageProps {}
+const StatusInfo: React.FC = () => {
+  const tableData = [
+    { id: 1, name: 'Item 1', status: 'Active' },
+    { id: 2, name: 'Item 2', status: 'Inactive' },
+    { id: 3, name: 'Item 3', status: 'Active' },
+    // Ajoutez plus de données ici
+  ];
 
-const StatusInfoPage: React.FC<StatusInfoPageProps> = ({}) => {
   return (
-    <table className="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
+    <Container >
+      <Row className="mb-3">
+        <Col>
+          <Button variant="primary">Ajouter un élément</Button>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Table striped bordered responsive>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Statut</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tableData.map((item) => (
+                <tr key={item.id}>
+                  <td>{item.id}</td>
+                  <td>{item.name}</td>
+                  <td>{item.status}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
-export default StatusInfoPage;
+export default StatusInfo;

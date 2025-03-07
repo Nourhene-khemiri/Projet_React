@@ -1,6 +1,6 @@
 import React from 'react';
 import Table from '../components/common/Table';
-import { Container, Row, Col } from 'react-bootstrap'; 
+import Button from '../components/common/Button';
 
 interface HistoryPage {}
 
@@ -24,34 +24,19 @@ const HistoryPage: React.FC<HistoryPage> = ({}) => {
   ];
 
   return (
-    <Container className="mt-5"> 
-      <Row>
-        <Col>
-        <br></br> <br></br> <br></br>
-          <h3>History</h3>
-        </Col>
-      </Row>
-      <br></br>
-      <Row className="mb-3">
-        <Col>
-          <div className="d-grid gap-2 d-md-block">
-            <button type="button" className="btn btn-outline-dark btn-lg">
-              Download Events History
-            </button>
-            <button type="button" className="btn btn-outline-dark btn-lg">
-              Erase Events History
-            </button>
-          </div>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <div className="table-responsive"> 
-            <Table headers={tableHeaders} data={tableData} />
-          </div>
-        </Col>
-      </Row>
-    </Container>
+    <div>
+      <h2>History</h2>
+      <div className="d-flex justify-content-start mb-3">
+        <div className="me-2">
+          <Button text="Download Events History"/>
+        </div>
+        <div>
+          <Button text="Erease Events Histoy" />
+        </div>
+      </div>
+
+      <Table headers={tableHeaders} data={tableData} />
+    </div>
   );
 };
 

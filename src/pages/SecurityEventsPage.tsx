@@ -1,24 +1,20 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from '../components/common/Button'; 
 
 interface SecurityEventsPageProps {}
 
 const SecurityEventsPage: React.FC<SecurityEventsPageProps> = ({}) => {
   return (
-    <Container className="d-flex justify-content-center align-items-center" >
-         <h1 className="text-start text-sm-center">Security Events </h1>
-      <Row className="text-center">
-        <Col xs={12} className="mb-3">
-           <Button variant="outline-dark" type="button">
-            Doawnload Security Events
-          </Button>
-        </Col>
-        <Col xs={12}>  <Button variant="outline-dark" type="button">
-            Erease All Security Events
-          </Button>
-        </Col>
-      </Row>
+    <Container className="d-flex justify-content-center align-items-center vh-100">
+      <div className="text-center">
+        <h1 className="text-center mb-4">Security Events</h1>
+        <div className="d-flex flex-column gap-3 w-100">
+          <Button text="Download Security Events" />
+          <Button text="Erase All Security Events" />
+        </div>
+      </div>
     </Container>
   );
 };

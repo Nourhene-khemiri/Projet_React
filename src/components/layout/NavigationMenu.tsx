@@ -18,17 +18,11 @@ interface NavigationMenuProps {}
 const NavigationMenu: React.FC<NavigationMenuProps> = ({}) => {
   return (
 
-    <Nav 
-    className="flex-column" 
-    style={{ backgroundColor: 'black', color: 'white', width: '250px', height: '100vh' }}>
+    <Nav className="flex-column">
     <Nav.Link href="/home" className="text-white d-flex align-items-center">
                          
             </Nav.Link>
-    
-     <br></br>
-     <br></br>
-     <br></br>
-     <br></br>
+
 
      <Nav.Link href="/status-info" className="text-white d-flex align-items-center">
      <img src={Status} alt="Logo" 
